@@ -5,7 +5,6 @@
         SuperAdmin,
         Admin,
         Manager,
-        Supervisor,
         Accountant,
         Cashier,
         Staff

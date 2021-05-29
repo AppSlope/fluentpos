@@ -4,4 +4,11 @@
     <RootNamespace>FluentPOS.Infrastructure.Shared</RootNamespace>
     <AssemblyName>FluentPOS.Infrastructure.Shared</AssemblyName>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.12.0" />
+    <PackageReference Include="MimeKit" Version="2.12.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
 </Project>
