@@ -1,5 +1,5 @@
 ﻿using FluentPOS.Application.Requests.Users;
-using FluentPOS.Application.Wrapper;
+using FluentPOS.Shared.Wrapper;
 using System.Threading.Tasks;
 
 namespace FluentPOS.Application.Interfaces.Services.Users

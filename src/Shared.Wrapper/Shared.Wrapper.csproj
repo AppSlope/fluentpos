@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>FluentPOS.Shared.Wrapper</RootNamespace>
+    <AssemblyName>FluentPOS.Shared.Wrapper</AssemblyName>
+  </PropertyGroup>
+</Project>

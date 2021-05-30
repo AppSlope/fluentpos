@@ -1,14 +1,12 @@
-﻿using FluentPOS.Application.Abstractions.DbContexts;
-using FluentPOS.Application.Abstractions.DI;
-using FluentPOS.Application.Abstractions.EFContexts;
+﻿using FluentPOS.Application.Abstractions.Auth;
+using FluentPOS.Application.Abstractions.DbContexts;
 using FluentPOS.Application.Exceptions;
-using FluentPOS.Application.Interfaces.Services.Auth;
 using FluentPOS.Application.Interfaces.Services.Users;
 using FluentPOS.Application.Settings;
 using FluentPOS.Infrastructure.Constants;
+using FluentPOS.Infrastructure.Identity;
 using FluentPOS.Infrastructure.Persistence.Contexts.Dapper;
 using FluentPOS.Infrastructure.Persistence.Contexts.EFCore;
-using FluentPOS.Infrastructure.Identity;
 using FluentPOS.Infrastructure.Services.Auth;
 using FluentPOS.Infrastructure.Services.Users;
 using Microsoft.AspNetCore.Identity;
@@ -25,7 +23,7 @@ namespace FluentPOS.Infrastructure.Extensions
     public static class ServiceCollectionExtensions
     {
         
-        public static IServiceCollection AddInfrastructureLayerServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddVersioning();
             services.AddContexts(configuration);
@@ -49,6 +47,7 @@ namespace FluentPOS.Infrastructure.Extensions
         {
             services.Configure<JWTSettings>(configuration.GetSection("JWTSettings"));
             services.Configure<MailSettings>(configuration.GetSection("MailSettings"));
+            services.Configure<CacheSettings>(configuration.GetSection("CacheSettings"));
             return services;
         }
 

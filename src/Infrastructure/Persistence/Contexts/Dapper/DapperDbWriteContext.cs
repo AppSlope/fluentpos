@@ -1,7 +1,6 @@
-﻿using FluentPOS.Application.Abstractions.DbContexts;
-using FluentPOS.Application.Abstractions.EFContexts;
+﻿using Dapper;
+using FluentPOS.Application.Abstractions.DbContexts;
 using FluentPOS.Infrastructure.Persistence.Contexts.EFCore;
-using Dapper;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading;

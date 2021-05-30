@@ -1,4 +1,4 @@
-﻿using FluentPOS.Application.Wrapper;
+﻿using FluentPOS.Shared.Wrapper;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;

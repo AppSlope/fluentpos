@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FluentPOS.Application.Wrapper
+namespace FluentPOS.Shared.Wrapper
 {
     public class Result : IResult
     {

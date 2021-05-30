@@ -12,7 +12,7 @@ namespace FluentPOS.Application.Abstractions.DbContexts
     //We will have a seperate Dapper Context that deals only with writing to the database against the same sql connection instance that is being used by EFCore's ApplicationDbContext.
     public interface IDbReadContext
     {
-        #nullable enable
+#nullable enable
 
         Task<IReadOnlyList<T>> QueryAsync<T>(string sql, object? param = null, IDbTransaction? transaction = null, CancellationToken cancellationToken = default);
 
@@ -20,6 +20,6 @@ namespace FluentPOS.Application.Abstractions.DbContexts
 
         Task<T> QuerySingleAsync<T>(string sql, object? param = null, IDbTransaction? transaction = null, CancellationToken cancellationToken = default);
 
-        #nullable disable
+#nullable disable
     }
 }
