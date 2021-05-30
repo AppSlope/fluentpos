@@ -15,7 +15,7 @@ namespace FluentPOS.API.Controllers.v1
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var product = await _mediator.Send(new GetProductQuery(id));
+            var product = await _mediator.Send(new GetProductQuery { Id = id, BypassCache = false });
             return Ok(product);
         }
     }

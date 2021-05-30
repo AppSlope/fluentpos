@@ -30,6 +30,7 @@ namespace FluentPOS.Application.PipelineBehaviors
             if (request is ICacheableQuery cacheableQuery)
             {
                 TResponse response;
+                if (cacheableQuery.BypassCache) return await next();
                 async Task<TResponse> GetResponseAndAddToCache()
                 {
                     response = await next();

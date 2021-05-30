@@ -12,10 +12,6 @@ namespace FluentPOS.Application.Features.Products.Queries.GetProduct
 {
     public class GetProductQuery : IRequest<Result<ProductViewModel>>, ICacheableQuery
     {
-        public GetProductQuery(int id)
-        {
-            Id = id;
-        }
         public int Id { get; set; }
         public bool BypassCache { get; set; }
         public string CacheKey => $"{nameof(GetProductQuery)}-{Id}";
