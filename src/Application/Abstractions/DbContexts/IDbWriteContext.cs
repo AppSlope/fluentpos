@@ -11,8 +11,10 @@ namespace FluentPOS.Application.Abstractions.DbContexts
     //It will help when you start switching EFCore DB Provider from the default SQL to MYSQL or so on.
     public interface IDbWriteContext : IDbReadContext
     {
-        #nullable enable
+#nullable enable
+
         Task<int> ExecuteAsync(string sql, object? param = null, IDbTransaction? transaction = null, CancellationToken cancellationToken = default);
-        #nullable disable
+
+#nullable disable
     }
 }

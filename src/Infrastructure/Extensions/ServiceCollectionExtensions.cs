@@ -23,7 +23,7 @@ namespace FluentPOS.Infrastructure.Extensions
     public static class ServiceCollectionExtensions
     {
         
-        public static IServiceCollection AddInfrastructureLayerServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddVersioning();
             services.AddContexts(configuration);

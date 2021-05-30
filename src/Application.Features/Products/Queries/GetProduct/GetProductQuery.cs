@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FluentPOS.Application.Features.Products.Queries.GetProduct
 {
-    public class GetProductQuery : IRequest<IResult<ProductViewModel>>, ICacheableQuery
+    public class GetProductQuery : IRequest<Result<ProductViewModel>>, ICacheableQuery
     {
         public GetProductQuery(int id)
         {
@@ -21,7 +21,7 @@ namespace FluentPOS.Application.Features.Products.Queries.GetProduct
         public string CacheKey => $"{nameof(GetProductQuery)}-{Id}";
         public TimeSpan? SlidingExpiration { get; set; }
     }
-    internal class GetProductQueryHandler : IRequestHandler<GetProductQuery, IResult<ProductViewModel>>
+    internal class GetProductQueryHandler : IRequestHandler<GetProductQuery, Result<ProductViewModel>>
     {
         private readonly IMapper _mapper;
 
@@ -30,7 +30,7 @@ namespace FluentPOS.Application.Features.Products.Queries.GetProduct
             _mapper = mapper;
         }
 
-        public async Task<IResult<ProductViewModel>> Handle(GetProductQuery request, CancellationToken cancellationToken)
+        public async Task<Result<ProductViewModel>> Handle(GetProductQuery request, CancellationToken cancellationToken)
         {
             Product product = new() { Id = request.Id, Barcode = "MKS1994", Name="iPhone 11S", Price = 9999, Unit = "PC", LocaleName = "Dummy Data", ImageUrl = "someimage.jpg", Description = "Phone" };
             var data = _mapper.Map<ProductViewModel>(product);
