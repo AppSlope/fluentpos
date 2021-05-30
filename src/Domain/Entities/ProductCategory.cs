@@ -1,6 +1,9 @@
 ﻿namespace FluentPOS.Domain.Entities
 {
-    internal class ProductCategory
+    public class ProductCategory
     {
+        public string Code { get; set; }
+        public string Name { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

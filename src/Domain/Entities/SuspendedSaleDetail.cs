@@ -1,9 +1,9 @@
 ﻿namespace FluentPOS.Domain.Entities
 {
-    public class SaleDetail : AuditableEntity
+    public class SuspendedSaleDetail : AuditableEntity
     {
-        public int SaleId { get; set; }
-        public virtual Sale Sale { get; set; }
+        public int SuspendedSaleId { get; set; }
+        public virtual SuspendedSale SuspendedSale { get; set; }
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
         public string ProductCode { get; set; }

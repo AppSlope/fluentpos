@@ -1,6 +1,6 @@
 ﻿namespace FluentPOS.Domain.Entities
 {
-    internal class Customer
+    public class Customer
     {
         public Person Details { get; set; }
     }

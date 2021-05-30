@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FluentPOS.Domain.Entities
 {
-    public class Sale : AuditableEntity
+    public class SuspendedSale : AuditableEntity
     {
         public DateTime Date { get; set; }
         public int CustomerId { get; set; }
@@ -26,6 +26,6 @@ namespace FluentPOS.Domain.Entities
         public string HoldReference { get; set; }
         public int StoreId { get; set; }
         public virtual Store Store { get; set; }
-        public IEnumerable<SaleDetail> SaleDetails { get; set; }
+        public IEnumerable<SuspendedSaleDetail> SuspendedSaleDetails { get; set; }
     }
 }
