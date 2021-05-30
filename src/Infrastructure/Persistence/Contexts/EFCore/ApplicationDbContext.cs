@@ -28,6 +28,7 @@ namespace FluentPOS.Infrastructure.Persistence.Contexts.EFCore
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+            modelBuilder.ApplyIdentityConfiguration();
         }
     }
 }
