@@ -1,8 +1,10 @@
 using FluentPOS.Application.Abstractions.Queries;
 using FluentPOS.Application.Abstractions.Serializations;
+using FluentPOS.Application.Settings;
 using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,19 +13,16 @@ namespace FluentPOS.Application.PipelineBehaviors
 {
     public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
     {
-        private static readonly DistributedCacheEntryOptions _defaultCacheOptions = new DistributedCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(1.0) };
-
         private readonly ISerializerService _serializer;
-
         private readonly IDistributedCache _cache;
-
         private readonly ILogger _logger;
-
-        public CachingBehavior(IDistributedCache cache, ISerializerService serializer, ILogger<TResponse> logger)
+        private readonly CacheSettings _settings;
+        public CachingBehavior(IDistributedCache cache, ISerializerService serializer, ILogger<TResponse> logger, IOptions<CacheSettings> settings)
         {
-            this._cache = cache ?? throw new ArgumentNullException(nameof(cache));
-            this._serializer = serializer ?? throw new ArgumentNullException(nameof(serializer));
-            this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _cache = cache ?? throw new ArgumentNullException(nameof(cache));
+            _serializer = serializer ?? throw new ArgumentNullException(nameof(serializer));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _settings = settings.Value;
         }
 
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
@@ -34,7 +33,8 @@ namespace FluentPOS.Application.PipelineBehaviors
                 async Task<TResponse> GetResponseAndAddToCache()
                 {
                     response = await next();
-                    var options = cacheableQuery.SlidingExpiration != null ? new DistributedCacheEntryOptions { SlidingExpiration = cacheableQuery.SlidingExpiration } : _defaultCacheOptions;
+                    var slidingExpiration = cacheableQuery.SlidingExpiration == null ? TimeSpan.FromHours(_settings.SlidingExpiration) : cacheableQuery.SlidingExpiration;
+                    var options = new DistributedCacheEntryOptions { SlidingExpiration = slidingExpiration };
                     await _cache.SetAsync(cacheableQuery.CacheKey, _serializer.Serialize(response), options, cancellationToken);
                     return response;
                 }

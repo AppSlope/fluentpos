@@ -47,6 +47,7 @@ namespace FluentPOS.Infrastructure.Extensions
         {
             services.Configure<JWTSettings>(configuration.GetSection("JWTSettings"));
             services.Configure<MailSettings>(configuration.GetSection("MailSettings"));
+            services.Configure<CacheSettings>(configuration.GetSection("CacheSettings"));
             return services;
         }
 

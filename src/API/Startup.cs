@@ -21,7 +21,7 @@ namespace FluentPOS.API
             services.AddControllers();
             services
                 .AddDistributedMemoryCache()
-                .AddApplicationServices()
+                .AddApplicationServices(_configuration)
                 .AddApplicationFeatures()
                 .AddInfrastructureServices(_configuration)
                 .AddSharedInfrastructureServices()
