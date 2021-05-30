@@ -1,7 +1,7 @@
-﻿using FluentPOS.Application.Abstractions.EFContexts;
-using FluentPOS.Infrastructure.Identity;
+﻿using FluentPOS.Application.Abstractions.DbContexts;
+using FluentPOS.Domain.Entities;
 using FluentPOS.Infrastructure.Extensions;
-using Microsoft.AspNetCore.Identity;
+using FluentPOS.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -18,7 +18,7 @@ namespace FluentPOS.Infrastructure.Persistence.Contexts.EFCore
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-
+        public DbSet<Product> Products { get; set; }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             return base.SaveChangesAsync(cancellationToken);

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="PipelineBehaviors\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>

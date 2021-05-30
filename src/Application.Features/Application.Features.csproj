@@ -10,10 +10,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Products\Commands\" />
-    <Folder Include="Products\Queries\GetProductList\" />
-    <Folder Include="Products\Queries\GetProduct\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared.ViewModels\Shared.ViewModels.csproj" />
     <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 

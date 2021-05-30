@@ -5,7 +5,7 @@ namespace FluentPOS.Application.Abstractions.Queries
     public interface ICacheableQuery
     {
         bool BypassCache { get; }
-        string CacheKey { get; set; }
+        string CacheKey { get; }
         TimeSpan? SlidingExpiration { get; }
     }
 }

@@ -1,14 +1,12 @@
 ﻿using FluentPOS.Application.Abstractions.DbContexts;
-using FluentPOS.Application.Abstractions.DI;
-using FluentPOS.Application.Abstractions.EFContexts;
 using FluentPOS.Application.Exceptions;
 using FluentPOS.Application.Interfaces.Services.Auth;
 using FluentPOS.Application.Interfaces.Services.Users;
 using FluentPOS.Application.Settings;
 using FluentPOS.Infrastructure.Constants;
+using FluentPOS.Infrastructure.Identity;
 using FluentPOS.Infrastructure.Persistence.Contexts.Dapper;
 using FluentPOS.Infrastructure.Persistence.Contexts.EFCore;
-using FluentPOS.Infrastructure.Identity;
 using FluentPOS.Infrastructure.Services.Auth;
 using FluentPOS.Infrastructure.Services.Users;
 using Microsoft.AspNetCore.Identity;
