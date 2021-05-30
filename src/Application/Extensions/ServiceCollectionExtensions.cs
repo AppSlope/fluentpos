@@ -12,7 +12,8 @@ namespace FluentPOS.Application.Extensions
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
-            if(_config.GetSection("PipelineSettings:Caching").Value == "True")
+            services.AddDistributedMemoryCache();
+            if (_config.GetSection("PipelineSettings:Caching").Value == "True")
             {
                 services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
             }
