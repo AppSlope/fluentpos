@@ -32,7 +32,7 @@ namespace FluentPOS.Application.Features.Products.Queries.GetProduct
 
         public async Task<IResult<ProductViewModel>> Handle(GetProductQuery request, CancellationToken cancellationToken)
         {
-            Product product = new() { Id = request.Id, Barcode = "MKS1994", Name="iPhone 11S", Price = 9999, Unit = "PC", LocaleName = "Kidney", ImageUrl = "someimage.jpg", Description = "Phone" };
+            Product product = new() { Id = request.Id, Barcode = "MKS1994", Name="iPhone 11S", Price = 9999, Unit = "PC", LocaleName = "Dummy Data", ImageUrl = "someimage.jpg", Description = "Phone" };
             var data = _mapper.Map<ProductViewModel>(product);
             return Result<ProductViewModel>.Success(data);
         }

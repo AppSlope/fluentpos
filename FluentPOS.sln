@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Features", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Shared", "_Shared", "{4C7102FF-FE2B-483E-8C11-6FFF44CE4CDE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.ViewModels", "Shared.ViewModels\Shared.ViewModels.csproj", "{226B8239-273E-4907-B359-0AB8A9A7A5FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.ViewModels", "src\Shared.ViewModels\Shared.ViewModels.csproj", "{226B8239-273E-4907-B359-0AB8A9A7A5FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Wrapper", "src\Shared.Wrapper\Shared.Wrapper.csproj", "{084EE8B3-C8F2-4A31-9EBE-52455BA6B82B}"
 EndProject
