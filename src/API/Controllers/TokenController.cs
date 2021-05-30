@@ -1,4 +1,4 @@
-﻿using FluentPOS.Application.Interfaces.Services.Auth;
+﻿using FluentPOS.Application.Abstractions.Auth;
 using FluentPOS.Application.Requests.Auth;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

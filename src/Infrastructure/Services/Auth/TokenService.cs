@@ -1,9 +1,9 @@
-﻿using FluentPOS.Application.Interfaces.Services.Auth;
+﻿using FluentPOS.Application.Abstractions.Auth;
 using FluentPOS.Application.Requests.Auth;
 using FluentPOS.Application.Responses.Auth;
 using FluentPOS.Application.Settings;
-using FluentPOS.Application.Wrapper;
 using FluentPOS.Infrastructure.Identity;
+using FluentPOS.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

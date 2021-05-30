@@ -1,4 +1,5 @@
 using FluentPOS.Application.Extensions;
+using FluentPOS.Application.Features.Extensions;
 using FluentPOS.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,7 @@ namespace FluentPOS.API
             services.AddControllers();
             services
                 .AddApplicationLayerServices()
+                .AddApplicationFeatures()
                 .AddInfrastructureLayerServices(_configuration)
                 .AddRouting(options => options.LowercaseUrls = true);
         }

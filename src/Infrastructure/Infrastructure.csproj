@@ -34,5 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Shared.Wrapper\Shared.Wrapper.csproj" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
-﻿using FluentPOS.Application.Abstractions.DbContexts;
+﻿using FluentPOS.Application.Abstractions.Auth;
+using FluentPOS.Application.Abstractions.DbContexts;
 using FluentPOS.Application.Exceptions;
-using FluentPOS.Application.Interfaces.Services.Auth;
 using FluentPOS.Application.Interfaces.Services.Users;
 using FluentPOS.Application.Settings;
 using FluentPOS.Infrastructure.Constants;

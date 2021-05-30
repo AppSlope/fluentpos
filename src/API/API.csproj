@@ -19,9 +19,7 @@
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Controllers\v1\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Application.Features\Application.Features.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 </Project>

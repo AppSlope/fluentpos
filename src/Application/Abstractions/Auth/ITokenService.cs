@@ -1,9 +1,9 @@
 ﻿using FluentPOS.Application.Requests.Auth;
 using FluentPOS.Application.Responses.Auth;
-using FluentPOS.Application.Wrapper;
+using FluentPOS.Shared.Wrapper;
 using System.Threading.Tasks;
 
-namespace FluentPOS.Application.Interfaces.Services.Auth
+namespace FluentPOS.Application.Abstractions.Auth
 {
     public interface ITokenService
     {

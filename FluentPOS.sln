@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Features", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Shared", "_Shared", "{4C7102FF-FE2B-483E-8C11-6FFF44CE4CDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.ViewModels", "Shared.ViewModels\Shared.ViewModels.csproj", "{226B8239-273E-4907-B359-0AB8A9A7A5FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.ViewModels", "Shared.ViewModels\Shared.ViewModels.csproj", "{226B8239-273E-4907-B359-0AB8A9A7A5FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Wrapper", "src\Shared.Wrapper\Shared.Wrapper.csproj", "{084EE8B3-C8F2-4A31-9EBE-52455BA6B82B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{226B8239-273E-4907-B359-0AB8A9A7A5FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{226B8239-273E-4907-B359-0AB8A9A7A5FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{226B8239-273E-4907-B359-0AB8A9A7A5FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084EE8B3-C8F2-4A31-9EBE-52455BA6B82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084EE8B3-C8F2-4A31-9EBE-52455BA6B82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084EE8B3-C8F2-4A31-9EBE-52455BA6B82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084EE8B3-C8F2-4A31-9EBE-52455BA6B82B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{EDDDFBF0-6141-4647-8E04-328F82DAE283} = {1199012C-A81F-49DD-98F8-DA6E166A8CF1}
 		{4C7102FF-FE2B-483E-8C11-6FFF44CE4CDE} = {ABB67D09-6A57-46F7-8E94-4A910AA90EA0}
 		{226B8239-273E-4907-B359-0AB8A9A7A5FC} = {4C7102FF-FE2B-483E-8C11-6FFF44CE4CDE}
+		{084EE8B3-C8F2-4A31-9EBE-52455BA6B82B} = {4C7102FF-FE2B-483E-8C11-6FFF44CE4CDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9E1C4AE-4C63-468F-ACBE-5D1D3B9FB7A1}
