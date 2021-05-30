@@ -1,4 +1,4 @@
-﻿using FluentPOS.Application.Abstractions.DapperContexts;
+﻿using FluentPOS.Application.Abstractions.DbContexts;
 using FluentPOS.Application.Abstractions.DI;
 using FluentPOS.Application.Abstractions.EFContexts;
 using FluentPOS.Application.Exceptions;

@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FluentPOS.Application.Abstractions.DapperContexts
+namespace FluentPOS.Application.Abstractions.DbContexts
 {
     //This context will use an instance of ApplicationDbContext (EfCore) so that it can execute Dapper commands within the same SQL connection as EFCore.
     //This greatly helps in using both EFCore and Dapper in the same SQL transaction, thus helps in Rollbacks and stuff.

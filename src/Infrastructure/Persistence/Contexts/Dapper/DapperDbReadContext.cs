@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using FluentPOS.Application.Abstractions.DapperContexts;
+using FluentPOS.Application.Abstractions.DbContexts;
 using FluentPOS.Infrastructure.Constants;
 using Microsoft.Extensions.Configuration;
 using MySqlConnector;

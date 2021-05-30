@@ -3,7 +3,7 @@ using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FluentPOS.Application.Abstractions.DapperContexts
+namespace FluentPOS.Application.Abstractions.DbContexts
 {
     //This can be used to execute Dapper Queries (queries only!).
     //The issue with adding Dapper Command Methods here is that, it will always use a SQL connection instance that is different from the EF Core instance.

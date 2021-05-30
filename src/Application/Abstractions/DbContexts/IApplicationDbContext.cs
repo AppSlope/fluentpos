@@ -4,7 +4,7 @@ using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FluentPOS.Application.Abstractions.EFContexts
+namespace FluentPOS.Application.Abstractions.DbContexts
 {
     //This will be the primary DB Access Context.
     public interface IApplicationDbContext

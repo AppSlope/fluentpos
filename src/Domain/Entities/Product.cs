@@ -1,6 +1,7 @@
 ﻿namespace FluentPOS.Domain.Entities
 {
-    internal class Product
+    public class Product : AuditableEntity
     {
+        public string Name { get; set; }
     }
 }

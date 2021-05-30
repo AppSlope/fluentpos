@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>FluentPOS.Application.Features</RootNamespace>
+    <AssemblyName>FluentPOS.Application.Features</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Products\Commands\" />
+    <Folder Include="Products\Queries\GetProductList\" />
+    <Folder Include="Products\Queries\GetProduct\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+
+</Project>
